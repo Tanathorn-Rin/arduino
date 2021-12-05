@@ -27,21 +27,21 @@ void loop() {
   digital_value = analogRead(ADC_PIN);
   percent_value = map(digital_value, 0, 4095, 0, 100);
   
-  if(percent_value <= 100 && percent_value >= 67)
+  if(percent_value >= 67)
   {
    ledcWrite(0,(percent_value-67)*4095/33);
    ledcWrite(1,0);
    ledcWrite(2,0);
   }
   
-  else if(percent_value <= 66 && percent_value >= 34)
+  else if(percent_value >= 34)
   {
    ledcWrite(0,0);
    ledcWrite(1,(percent_value-33)*4095/33);
    ledcWrite(2,0);
   }
   
-  else if(percent_value <= 33 && percent_value >= 0)
+  else
   {
    ledcWrite(0,0);
    ledcWrite(1,0);
