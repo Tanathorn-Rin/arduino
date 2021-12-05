@@ -1,7 +1,6 @@
 #define ADC_PIN 36
 #define FREQUENCY 5000
 #define RESOLUTION 12
-#define PWM_PIN 22
 #define GREEN 4
 #define YELLOW 16
 #define RED 17
